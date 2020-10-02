@@ -242,8 +242,12 @@ print("")
 # MOSTRANDO O TIPO DE UM OBJETO
 tipObjA = type(a)
 tipObjC = type(c)
+tipObjT = type((1, 2, 3))
 tipObjN = type(ListaN)
+tipObjD = type(meuDic)
 
 print(tipObjA)
 print(tipObjC)
+print(tipObjT)
 print(tipObjN)
+print(tipObjD)
