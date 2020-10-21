@@ -235,7 +235,7 @@ finally:
 meu_texto = input("Digite um texto: ") #recebendo textos
 numero_inteiro = int(input("Digite um numero inteiro: "))#recebendo números
 numero_decimal = float(input("Digite um numero decimal: "))#recebendo números
-print(meu_texto + " " + str(numero_inteiro) + " " + str(numero_decimal))
+print(meu_texto + " - " + str(numero_inteiro) + " - " + str(numero_decimal))
 print("")
 print("")
 
@@ -246,8 +246,8 @@ tipObjT = type((1, 2, 3))
 tipObjN = type(ListaN)
 tipObjD = type(meuDic)
 
-print(tipObjA)
-print(tipObjC)
-print(tipObjT)
-print(tipObjN)
-print(tipObjD)
+print("Tipo 'Inteiro': " + str(tipObjA))
+print("Tipo 'String': "+ str(tipObjC))
+print("Tipo 'Tupla': " + str(tipObjT))
+print("Tipo 'Lista': " + str(tipObjN))
+print("Tipo 'Dicionário': " + str(tipObjD))
