@@ -2,7 +2,7 @@
 print("Olá mundo")
 print(5*5)
 """
-Comentário de Várias Linhas
+Comentário de Várias Linhas """ """
 """
 # DEFINIÇÕES DE ALGUMAS VARIÁVEIS E LISTAS
 a = 5
@@ -161,6 +161,7 @@ newFile = open("TESTE.TXT", "w") #cria um novo arquivo (parâmentro "w" para mod
 #para editar o arquivo
 
 newFile.write("Teste de edicao de arquivo")'''
+print("")
 
 # TRABALHANDO COM DICIONÁRIOS
 print("TRABALHANDO COM DICIONÁRIOS")
@@ -232,11 +233,36 @@ finally:
     print("10 / 2 = " + str(10 / 2))
 
 # RECEBENDO VALORES PELO MÉTODO 'INPUT'
+print("RECEBENDO VALORES PELO MÉTODO 'INPUT'")
+print("")
 meu_texto = input("Digite um texto: ") #recebendo textos
 numero_inteiro = int(input("Digite um numero inteiro: "))#recebendo números
 numero_decimal = float(input("Digite um numero decimal: "))#recebendo números
 print(meu_texto + " - " + str(numero_inteiro) + " - " + str(numero_decimal))
 print("")
+print("")
+
+# TRABALHANDO COM SET'S (CONJUNTOS)
+print("TRABALHANDO COM SET'S (CONJUNTOS)")
+print("")
+"""
+Conjuntos não possuem noção de ordem por isso seus elementos não podem ser acessados com colchetes [] nem podem ser fatiados.
+Os conjuntos (set) não aceitam valores repetidos ao tentar criar um conjunto com valores repetidos eles serão descartados só sobrando um valor do mesmo.
+Aceita tipos diferentes como valor (inteiro, flutuante, tupla, string, etc.), mas mão aceita conjuntos mutáveis (listas ou dicionários) como valor.
+ """
+
+listaSet = {'Maçã', 'Laranja', 'Uva', 'Abacaxi', 'Maçã', 'Abacate', 'Laranja'} #definindo uma variável do tipo 'set' (um conunto)
+setTratado = set(listaSet)
+print(setTratado)
+
+print("Percorrendo o Set tratado pela classe 'set': ")
+for sseett in setTratado:
+    print(sseett)
+print("")
+
+print("Percorrendo o set declarado: ")
+for s in listaSet:
+    print(s)
 print("")
 
 # MOSTRANDO O TIPO DE UM OBJETO
@@ -245,9 +271,11 @@ tipObjC = type(c)
 tipObjT = type((1, 2, 3))
 tipObjN = type(ListaN)
 tipObjD = type(meuDic)
+tipObjS = type(listaSet)
 
 print("Tipo 'Inteiro': " + str(tipObjA))
 print("Tipo 'String': "+ str(tipObjC))
 print("Tipo 'Tupla': " + str(tipObjT))
 print("Tipo 'Lista': " + str(tipObjN))
 print("Tipo 'Dicionário': " + str(tipObjD))
+print("Tipo 'Conjunto-Set': " + str(tipObjS))
