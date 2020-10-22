@@ -113,12 +113,18 @@ print("CONVERÇÕES EXPLÍCITAS")
 
 varTXT = "Bruno"
 varNUM = 5
-
+varTUP = ("Bruno", "Elvis", "Pereira", "Silva")
 #int(varTXT) #valores de texto para número
-str(varNUM) #valores de número para texto
-
+NUMtoSTR = str(varNUM) #valores de número para texto
+TUPtoLST = list(varTUP)#convertendo conjunto de dados para listas
+tipoNUMtoSTR = type(NUMtoSTR)
+tipoTUPtoLST = type(TUPtoLST)
 print(varTXT)
 print(varNUM)
+print(varTUP)
+print()
+print(tipoTUPtoLST)
+print(tipoNUMtoSTR)
 
 print("")
 

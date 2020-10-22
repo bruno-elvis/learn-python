@@ -26,3 +26,43 @@ print("Tamanho do objeto 'tuplaABC': " + str(len(listaABC)) + " - Tipo: " + str(
 print("")
 print("Tamanho do objeto 'dicABC': " + str(len(dicABC)) + " - Tipo: " + str(type(dicABC)))
 print("")
+
+print("")
+listaProcess = []
+listaTest = ["one", "two", "tree", "four"]
+for i in listaTest:
+    listaProcess.append("five")
+
+print(listaProcess)
+print("")
+## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
+
+apr = 'Aprovado'
+rep = 'Reprovado'
+resultado = ''
+nota = 10
+
+if nota == 10:
+    resultado = apr
+    print("IF")
+elif nota > 5:
+    resultado = apr
+    print("ELIF")
+else:
+    resultado = rep
+print("Usando ELIF: " + resultado)
+print("ELSE")
+
+print("")
+
+if (nota == 5) or (nota > 5):
+    resultado = apr
+    print("IF")
+else:
+    resultado = rep
+print("Usando ELSE: " + resultado)
+print("ELSE")
+
+## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
+
+#map e filter
