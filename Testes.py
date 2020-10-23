@@ -64,5 +64,51 @@ print("Usando ELSE: " + resultado)
 print("ELSE")
 
 ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
+print()
 
-#map e filter
+listTrat = ["Aprendendo", "Python"]
+listTrat.append("Teste") #adiciona um item no final da lista
+print(listTrat)
+
+removeLast = listTrat.pop() #retorna o ultimo valor e remove o mesmo da lista
+print(removeLast)
+print(listTrat)
+
+removeFirst = listTrat.pop(0) #pode receber como parâmentro o índice do item da lista que será removido
+print(removeFirst)
+print(listTrat)
+
+# 'IN' = 'Está contido'
+listSystem = ['I', 'E', 'A', 'I', 'A', 'I', 'O']
+contemA = 'H' in listSystem
+contemB = 'A' in listSystem
+#é case sensitive
+print("A lista {} contém o algarismo 'H'? ->".format(listSystem) + str(contemA))
+print("A lista {} contém o algarismo 'A'? -> ".format(listSystem) + str(contemB))
+
+# CLASSE MAP e FILTER
+print()
+
+def aoQuadrado (var):
+    return var**2
+
+listMapeFil = [9, 5, 1, 9, 1, 9, 15]
+print()
+
+mapeando = map(aoQuadrado, listMapeFil) #retorna um objeto do tipo map que deve ser convertido em uma lista por exemplo
+mapeandoComLambda = map(lambda x : x**2, listMapeFil)
+print(list(mapeando))
+print(list(mapeandoComLambda))
+print()
+
+filtrandoNumerosImpares = filter(lambda b : b % 2 == 1, listMapeFil) #filtrando números ímpares dentro da lista 'listMapeFil', o método filter deve receber como parâmetros uma função e em seguida um conjunto de dados (lists), e como um terceiro parâmetro pode receber um iterável
+print(list(filtrandoNumerosImpares))
+print()
+
+print(len(listSystem))
+frase = "Minha comida preferida é lasanha."
+corteDaFrase = frase.split(" ")
+print(frase)
+print(len(frase)) #tamanho da string frase (em numero de letras (índices))
+print(corteDaFrase)
+print(len(corteDaFrase)) #tamanho da lista criada a partir da separação de palavras do método 'split'

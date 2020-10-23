@@ -11,6 +11,9 @@ c = "Maior"
 ListaT = [1, 5, 10, 13, 22, 55]
 ListaN = ["Bruno", "Elvis", "Pereira", "Silva"]
 
+# TRATAMENTO DE LISTAS
+print("TRATAMENTO DE LISTAS")
+
 # UTILIZANDO IF
 print("UTILIZANDO IF")
 if a > b:
