@@ -42,26 +42,31 @@ rep = 'Reprovado'
 resultado = ''
 nota = 10
 
-if nota == 10:
-    resultado = apr
+if nota != 10:
+    resultado = apr + " (IF)"
     print("IF")
 elif nota > 5:
-    resultado = apr
+    resultado = apr + " (ELIF)"
     print("ELIF")
 else:
     resultado = rep
-print("Usando ELIF: " + resultado)
-print("ELSE")
+    print("ELSE")
 
+print("Usando ELIF: " + resultado)
+
+
+print("")
 print("")
 
 if (nota == 5) or (nota > 5):
-    resultado = apr
+    resultado = apr + " (IF)"
     print("IF")
 else:
     resultado = rep
+    print("ELSE")
+
 print("Usando ELSE: " + resultado)
-print("ELSE")
+
 
 ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
 print()
