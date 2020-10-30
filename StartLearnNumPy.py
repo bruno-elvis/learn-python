@@ -5,13 +5,13 @@ npArray = np.array(fArray)
 fMatriz = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
 npMatriz = np.array(fMatriz)
 
-print(str(fMatriz) + str(type(fMatriz)))
+print(str(fMatriz), str(type(fMatriz)))
 print("")
-print(str(npMatriz) + str(type(npMatriz)))
+print(str(npMatriz), str(type(npMatriz)))
 print("")
-print(str(fArray) + str(type(fArray)))
+print(str(fArray), str(type(fArray)))
 print("")
-print(str(npArray) + str(type(npArray)))
+print(str(npArray), str(type(npArray)))
 print("")
 
 listaGerada = np.arange(0, 16, 3)
@@ -48,3 +48,15 @@ print("Máximo: " + str(arrayDeInteiros.max()))
 print("Mínimo: " + str(arrayDeInteiros.min()))
 print("Índice que se encontra o número máximo: " + str(arrayDeInteiros.argmax()))
 print("Índice que se encontra o número mínimo: " + str(arrayDeInteiros.argmin()))
+print()
+print()
+# INDEXAÇÃO EM NUMPY ARRAYS
+indArray = np.arange(0, 56, 10)
+print(indArray)
+print()
+#buscado índices dentro de um array numpy
+print(indArray[5])
+print(indArray[2:5])
+my_set = {1, 2, 3}
+my_set = {5, 2, 5}
+print(my_set)

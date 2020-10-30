@@ -262,7 +262,7 @@ Aceita tipos diferentes como valor (inteiro, flutuante, tupla, string, etc.), ma
 
 listaSet = {'Maçã', 'Laranja', 'Uva', 'Abacaxi', 'Maçã', 'Abacate', 'Laranja'} #definindo uma variável do tipo 'set' (um conunto)
 setTratado = set(listaSet)
-print(setTratado)
+print(setTratado, str(type(listaSet)))
 
 print("Percorrendo o Set tratado pela classe 'set': ")
 for sseett in setTratado:
