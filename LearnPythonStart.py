@@ -26,7 +26,7 @@ else: #também pode ser utilizado o 'elif' cujo objetivo é ser mais uma condiç
 print("UTILIZANDO WHILE")
 while a > 0:
     print(a)
-    a -= 1 #a = a + 1
+    a -= 1 #a = a + 1 (outra forma de se escrever a incrementação)
 
 print("")
 
@@ -38,6 +38,7 @@ while (ii < 5) and (xx < 5):
     print(f"ii neste índice vale: {ii}") #é o mesmo que esta notação: print("i vale agora: {}".format(i)), '{}' recebe as variáveis que serão substituídas pelo valor das mesmas na string de saída
     print("xx neste índice vale: {}".format(xx))
     print("valor de ii: {} e xx: {}".format(ii, xx)) #outra forma de chamar os outputs a partir de variáveis ou objetos
+                                                     #quem define a ordem de saída (output) das informações é o método "format" e não as "{}", exceto quando se utiliza "alias" dentro das "{}" (exemplo¹ abaixo)
     ii = ii + 1
     xx += + 1
 
@@ -53,7 +54,7 @@ print("")
 Saida1 = "Teste S. 001"
 Saida2 = "Teste S. 002"
 print("Aqui está o valor da variável 'T1': {} e aqui está o valor da variável 'T2': {}".format(Saida1, Saida2))
-print("Aqui está o valor da variável 'T1': {T1} e aqui está o valor da variável 'T2': {T2}".format(T1=Saida2, T2=Saida1))
+print("Aqui está o valor da variável 'T1': {T1} e aqui está o valor da variável 'T2': {T2}".format(T1=Saida2, T2=Saida1)) #exemplo¹ utilizando alias com método "format"
 
 print("")
 
@@ -63,8 +64,8 @@ for i in ListaN, ListaT: #pode ser passado uma quantidade ilimitada de objetos p
     print(i)
 
 print("")
-print("RANGE DE TAMANHO 15, INICIADO EM 1 E INCREMENTANDO EM 3")
-for i in range(15, 1, 3): #range(tamanho da lista, inicia no local, incrementador (passo da contagem))
+print("RANGE DE TAMANHO 15, INICIADO EM 0 E INCREMENTANDO EM 3")
+for i in range(0, 15, 3): #range(início da lista, final da lista, incrementador (passo da contagem))
     print(i)
 
 print("")
@@ -72,25 +73,26 @@ print("")
 # PERCORRENDO STRINGS
 print("RETORNA O TAMANHO DO ÍNDICE DENTRO DE UM OBJETO (STRING OU LISTA)")
 print("Tamanho da String 'c': " + str(len(c))) #retorna o número de índices em um objeto/container/string/lista
+                                               #desconsiderando o '0' como sendo o início da lista (inicia em 1-x)
 print("Tamanho do Índice da ListaT (Objetos da Lista): " + str(len(ListaT)))
 
 sizeString = len(ListaN)
 print("Tamanho da listaN (Quantidade de Objetos): " + str(sizeString))
-#também conta strings concatenadas(incluindo os espaços)
+#também retorna o tamanho de uma string (inclui os 'espaços' na quantidade total dos índices)
 print("")
 
 # NAVEGAÇÃO POR ÍNDICES
 print("NAVEGAÇÃO POR ÍNDICES")
 
-print("Objeto no indice '1' da listaN: " + ListaN[1]) #no Python a indexação começa no 0
-print("Caractere no indice '2' da string 'c': " + c[2])
+print("Objeto no índice '1' da listaN: " + ListaN[1]) #no Python a indexação começa em '0'
+print("Caractere no índice '2' da string 'c': " + c[2])
 
-varTexto = "Bruno Elvis Pereira Silva"
-print ("Trexo exibido começando do índice 6(inclusivo) até o 11(excludente): " + varTexto[6:12]) #exibe o trecho entre índices [X :(à) Y], recebe = (string[índice incial : índice final] e se denomina "slice" este método de pegar uma parte de uma string
+varMeuNome = "Bruno Elvis Pereira Silva"
+print ("Trexo exibido começando do índice 6 (inclusivo) até o 11 (excludente): " + varMeuNome[6:12]) #exibe o trecho entre índices [X :(à) Y], recebe = (string[índice incial : índice final] e se denomina "slice" este método de pegar uma parte de uma string
                        #sendo que nesta indexação o primeiro índice [X:] é inclusivo (conta com ele) e o segundo índice [:Y] é excludente (não considera ele na exibição)
 print("")
-print("Formatação em Caixa-Alta do Objeto no índice '0' da ListaN: " + ListaN[0].upper()) #caixa alta
-print("Formatação em Caixa-Baixa do Objeto no índice '2' da ListaN: " + ListaN[2].lower()) #formatação minúscula
+print("Formatação em Caixa-Alta do Objeto no índice '0' da ListaN: " + ListaN[0].upper()) #formatação em caixa alta
+print("Formatação em Caixa-Baixa do Objeto no índice '2' da ListaN: " + ListaN[2].lower()) #formatação em minúsculas
 
 print("")
 
@@ -98,16 +100,16 @@ print("")
 print("TRABALHANDO COM TRATAMENTO DE STRINGS (FUNÇÕES)")
 print("")
 
-print("Função 'strip' - varTexto: " + varTexto.strip()) #remove caracteres especiais ou espaços iniciais e finais de uma string
-print("Função 'split' - varTexto: ")
-print(varTexto.split(" ")) #separa o conteúdo de uma string em partes, passando um delimitador como parâmetro / é Case Sensitive
+print("Função 'strip' - varMeuNome: " + varMeuNome.strip()) #remove caracteres especiais ou espaços iniciais e finais de uma string
+print("Função 'split' - varMeuNome: ")
+print(varMeuNome.split(" ")) #separa o conteúdo de uma string em partes, passando um delimitador como parâmetro / é Case Sensitive
 print("")
-print("Buscar índice do primeiro caractere da string informada no parâmetro (função 'find'): " + str(varTexto.find("Silva"))) #(retorna o índice(posição) do primeiro caractere do parâmetro passado para a busca) / busca um caracter ou conjunto de caracteres dentro de uma string, é Case-sensitive, caso não encontre o parâmetro definido retorna "-1" e não pode ser chamado em listas
-busca = varTexto.find("Elvis")
-print("Função 'find' passando como parâmetro a variável com o valor de busca: "+ varTexto[busca:]) #exibe o texto iniciado numa posição (var = busca) e finalizado em outra posição (sem parámetro de fim = null)
+print("Buscar índice do primeiro caractere da string informada no parâmetro (função 'find'): " + str(varMeuNome.find("Silva"))) #(retorna o índice(posição) do primeiro caractere do parâmetro passado para a busca) / busca um caracter ou conjunto de caracteres dentro de uma string, é Case-sensitive, caso não encontre o parâmetro definido retorna "-1" e não pode ser chamado em listas
+busca = varMeuNome.find("Elvis")
+print("Função 'find' passando como parâmetro a variável com o valor de busca: "+ varMeuNome[busca:]) #exibe o texto iniciado numa posição (var = busca) e finalizado em outra posição (sem parámetro de fim = null)
 print("")
-print(varTexto.replace("Pereira", "Winchester")) #substitui um trecho ou caractere de uma string, o primeiro parâmetro do método é a busca na string e o segundo é o conjunto de caracteres a bustituir
-print("Função 'replace' substititui um valor por outro dentro de uma string: " + varTexto)
+print(varMeuNome.replace("Pereira", "Winchester")) #substitui um trecho ou caractere de uma string, o primeiro parâmetro do método é a busca na string e o segundo é o conjunto de caracteres a bustituir
+print("Função 'replace' substititui um valor por outro dentro de uma string: " + varMeuNome)
 
 print("")
 

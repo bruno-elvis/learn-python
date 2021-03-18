@@ -27,7 +27,7 @@ print()
 # MATRIZ IDENTIDADE
 print("MATRIZ 'IDENTIDADE' (POPULADA COM 'ZEROS' E 'UNS' UNIFORMEMENTE NA VERTICAL): \n", np.eye(5))
 print()
-
+#
 print("POPULAÇÃO DE ARRAY NUMPY IGUALMENTE SEPARADO ENTRE UM ÍNDICE DO ARRAY E OUTRO:", np.linspace(0, 10, 4))#parâmetros principais: ínicio do array, final do array e "passo" do array (espaço igualmente separado entre um índice do array e outro)
 print()
 

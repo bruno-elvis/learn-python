@@ -117,3 +117,22 @@ print(frase)
 print(len(frase)) #tamanho da string frase (em numero de letras (índices))
 print(corteDaFrase)
 print(len(corteDaFrase)) #tamanho da lista criada a partir da separação de palavras do método 'split'
+
+print("")
+
+varTeste1 = "Bruno"
+varTeste2 = "Bruna"
+varTeste4 = "Bruno Elvis Pereira Silva"
+print("Masculino: {}, Feminino: {}".format(varTeste1, varTeste2))
+print("")
+print("VAR-1: {BO}, VAR-2: {BA}".format(BA=varTeste2, BO=varTeste1))
+
+print("")
+varTeste3 = range(5, 15, 3)
+
+for i in varTeste3:
+    print(i)
+
+print()
+print(len(varTeste4))
+
