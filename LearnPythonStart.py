@@ -98,30 +98,31 @@ print("")
 
 # FUNÇÕES PARA TRATAMENTO DE STRINGS
 print("TRABALHANDO COM TRATAMENTO DE STRINGS (FUNÇÕES)")
-print("")
+print("-------------------------------------------------------------------------------------------------")
 
 print("Função 'strip' - varMeuNome: " + varMeuNome.strip()) #remove caracteres especiais ou espaços iniciais e finais de uma string
 print("Função 'split' - varMeuNome: ")
 print(varMeuNome.split(" ")) #separa o conteúdo de uma string em partes, passando um delimitador como parâmetro / é Case Sensitive
 print("")
-print("Buscar índice do primeiro caractere da string informada no parâmetro (função 'find'): " + str(varMeuNome.find("Silva"))) #(retorna o índice(posição) do primeiro caractere do parâmetro passado para a busca) / busca um caracter ou conjunto de caracteres dentro de uma string, é Case-sensitive, caso não encontre o parâmetro definido retorna "-1" e não pode ser chamado em listas
+print("Buscar índice do primeiro caractere da string informada no parâmetro (função 'find'): " + str(varMeuNome.find("Silva"))) #(retorna o índice(posição) do primeiro caractere do parâmetro passado para a busca) / busca um caracter ou conjunto de caracteres dentro de uma string (considerando espaços), é Case-sensitive, caso não encontre o parâmetro definido retorna "-1" e não pode ser chamado em listas
 busca = varMeuNome.find("Elvis")
 print("Função 'find' passando como parâmetro a variável com o valor de busca: "+ varMeuNome[busca:]) #exibe o texto iniciado numa posição (var = busca) e finalizado em outra posição (sem parámetro de fim = null)
 print("")
 print(varMeuNome.replace("Pereira", "Winchester")) #substitui um trecho ou caractere de uma string, o primeiro parâmetro do método é a busca na string e o segundo é o conjunto de caracteres a bustituir
 print("Função 'replace' substititui um valor por outro dentro de uma string: " + varMeuNome)
 
-print("")
+print("------------------------------------------------------------------------------------------------")
 
 # Conversão (Explícita) de tipos de variáveis
 print("CONVERÇÕES EXPLÍCITAS")
+print("--------------------------------")
 
 varTXT = "Bruno"
 varNUM = 5
 varTUP = ("Bruno", "Elvis", "Pereira", "Silva")
 #int(varTXT) #valores de texto para número
 NUMtoSTR = str(varNUM) #valores de número para texto
-TUPtoLST = list(varTUP)#convertendo conjunto de dados para listas
+TUPtoLST = list(varTUP) #convertendo conjunto de dados para listas
 tipoNUMtoSTR = type(NUMtoSTR)
 tipoTUPtoLST = type(TUPtoLST)
 print(varTXT)
@@ -131,6 +132,7 @@ print()
 print(tipoTUPtoLST)
 print(tipoNUMtoSTR)
 
+print("--------------------------------")
 print("")
 
 # DEFINIÇÂO DE FUNÇÕES
@@ -139,6 +141,7 @@ print("TRABALHANDO COM FUNÇÕES")
 def somar(a, b):
     result = a + b
     print(str(a) + " mais " + str(b) + " é igual a " + str(result))
+    return result
 
 def mult(a, b):
     return str(a) + " vezes " + str(b) + " = " + str(a * b)
@@ -152,26 +155,38 @@ print("RETORNO DE FUNÇÕES ESTATICAMENTE TIPADAS")
 def soma (a: int, b: float) -> str: #função com parâmetros tipados (estaticamente tipados)
     return str(a + b) #retorna a soma dos valores numéricos em string definido o tipo do retorno na própria função artravés da parametrização "->"
 
-print("Chamando a função 'soma' passando dois valores tipados (5, 5.5)" + soma(5, 5.5))
+print("Chamando a função 'soma' passando dois valores tipados (5, 5.5)" + " = " + soma(5, 5.5))
 
 print("")
 
-# MANIPULAÇÃO DE ARQUIVOS (REVISAR)
+# MANIPULAÇÃO DE ARQUIVOS #
 print("TRABALHANDO COM MANIPULAÇÃO DE ARQUIVOS")
+"""
+# MODOS DE ACESSO (LEITURA E ESCRITA DE ARQUIVOS) DO PARÂMETRO DO MÉTODO 'open()' #
+'r'  -> Somente leitura do arquivo;
+'w'  -> Escrita (caso o arquivo já exista, será apagado e um novo arquivo vazio será criado);
+'a'  -> Leitura e escrita (adiciona o novo conteúdo no final do conteúdo do arquivo);
+'b'  -> Modo binário;
+'+'  -> Atualização (leitura/escrita);
+'r+' -> Leitura e escrita de um arquivo;
+'W+' -> Escrita (este modo, assim como o 'w', também apaga o conteúdo anterior do arquivo);
+'a+' -> Leitura e escrita (abre o arquivo para atualização);
+'x'  -> Abre o arquivo para criação exclusiva, falhando se o arquivo já existir.
+"""
+insArquivo = open('CONTAS.TXT', 'rt')
+#print(insArquivo.read()) #função para ler o arquivo completo no seu formato atual (numa única string)
 
-'''arquivo = open("contas.txt", "r+") #função para instanciar a abertura de um arquivo, sendo que o primeiro parâmentro se refere ao arquivo ou caminho do arquivo e o segundo parâmentro se refere ao modo de leitura
-print(arquivo)'''
 
-#linhas = arquivo.readlines() #função para ler as linhas do arquivo
-#linhas = arquivo.readline() #função para ler uma linha do arquivo
-'''linhas = arquivo.read() #função para ler o arquivo complero no seu formato atual
+#linhas = insArquivo.readline() #função para ler e retornar uma linha do arquivo a cada iteração (inicia na linha 1 do arquivo)
+#linhas = insArquivo.readlines() #função para ler e retornar todas as linhas do arquivo (retorna uma lista)
+#print(linhas)
 
-print(linhas)
+insArquivo.close() #fecha o arquivo (encerra a instância do objeto manipulador de arquivos)
 
-newFile = open("TESTE.TXT", "w") #cria um novo arquivo (parâmentro "w" para modo de escrita)
-#para editar o arquivo
+#newFile = open('TESTE_X.TXT', 'w') #cria um novo arquivo (parâmentro 'w' para modo de escrita)
 
-newFile.write("Teste de edicao de arquivo")'''
+#Para editar o arquivo:
+#newFile.write("Teste de edicao de arquivo")
 print("")
 
 # TRABALHANDO COM DICIONÁRIOS

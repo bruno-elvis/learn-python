@@ -135,4 +135,22 @@ for i in varTeste3:
 
 print()
 print(len(varTeste4))
+print()
 
+# MANIPULAÇÃO DE ARQUIVOS
+print("TRABALHANDO COM MANIPULAÇÃO DE ARQUIVOS")
+
+insArquivo = open('CONTAS.TXT', 'rt')
+#print(insArquivo.read()) #função para ler o arquivo complero no seu formato atual
+
+linhas = insArquivo.readlines() #função para ler as linhas do arquivo
+print(linhas)
+print(type(linhas))
+
+insArquivo.close() #fecha o arquivo (encerra a instância do objeto manipulador de arquivos)
+
+#newFile = open('TESTE_X.TXT', 'w') #cria um novo arquivo (parâmentro 'w' para modo de escrita)
+
+#Para editar o arquivo:
+#newFile.write("Teste de edicao de arquivo")
+print("")
