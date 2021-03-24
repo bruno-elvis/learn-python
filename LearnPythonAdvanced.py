@@ -1,5 +1,5 @@
-# Conceitos Avançados do Python #
-# Trabalhando com List Comprehension
+# CONCEITOS AVANÇADOS DE PYTHON #
+# Trabalhando com List Comprehension #
 listaA = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 lsitaB = [i*2 for i in listaA] #a listaB recebe o cálculo da raiz quadrada de cada item da listaA
 ListaC = [i for i in listaA if i % 2 == 1] #a listaC recebe uma lista com todos os números primos da listaA

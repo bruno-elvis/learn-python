@@ -235,6 +235,7 @@ print()
 print("TRABALHANDO CLASSE 'RANDOM'")
 
 import random as rd
+from typing import Union
 #from typing import KeysView, cast
 
 num = rd.randint(1, 15) #método para gerar um número aleatório com parâmetro inicial e final
@@ -281,20 +282,104 @@ Conjuntos não possuem noção de ordem por isso seus elementos não podem ser a
 Os conjuntos (set) não aceitam valores repetidos ao tentar criar um conjunto com valores repetidos eles serão descartados só sobrando um valor do mesmo.
 Aceita tipos diferentes como valor (inteiro, flutuante, tupla, string, etc.), mas mão aceita conjuntos mutáveis (listas ou dicionários) como valor.
 """
-listaSet = {'Maçã', 'Laranja', 'Uva', 'Abacaxi', 'Maçã', 'Abacate', 'Laranja'} #definindo uma variável do tipo 'set' (um conunto)
-setTratado = set(listaSet)
-print("Exibindo o conjunto (set) 'listaSet': " + str(listaSet) + " | " + str(type(listaSet)))
-print("Exibindo o conjunto (set) 'setTratado' tratado: " + str(setTratado) + " | " + str(type(setTratado)))
+listaS = ['Maçã', 'Laranja', 'Uva', 'Abacaxi', 'Maçã', 'Abacate', 'Laranja'] #declaração de uma lista [] (utiliza-se colchetes)
+meuSet = {5, 1.0, "Sete", (1, 2, 3)} #declaração de um set {} (ultiliza-se chaves)
+lstSet = set(listaS) #declarando um 'set' através de uma lista
+
+print("Exibindo a lista declarada: " + str(listaS) + " | " + str(type(listaS)))
+print("Exibindo o conjunto (set) 'lstSet' a partir da lista 'listaS': " + str(lstSet) + " | " + str(type(lstSet)))
+print("Exibindo o conjunto (set) 'meuSet': " + str(meuSet) + ' | ' + str(type(meuSet)))
 print()
 
-print("Percorrendo o Set tratado pela classe 'set': ")
-for set in setTratado:
-    print(set)
+print("Percorrendo a lista 'listaS' declarada: ")
+for lst in listaS:
+    print(lst)
 print()
 
-print("Percorrendo o set declarado: ")
-for s in listaSet:
+print("Percorrendo o set 'lstSet' declarado a partir da lista 'listaS': ")
+for s in lstSet:
     print(s)
+print()
+
+#declarando um conjunto (set) vazio da forma correta
+setVazio = {} #forma errada
+print("SET vazio declarado com chaves ({}) retorna (valor): " + str(setVazio) + " | tipo: " + str(type(setVazio)))
+
+setVazio = set() #forma correta
+print("SET vazio declarado e instanciado a partir da classe 'set()' retorna (valor): " + str(setVazio) + " | tipo: " + str(type(setVazio)))
+print()
+
+"""
+Os conjuntos são mutáveis. No entanto, como eles são desordenados, a indexação não tem sentido.
+Não podemos acessar ou alterar um elemento de um conjunto usando indexação ou fatiamento.
+Podemos adicionar um único elemento, ou vários, utilizando o método 'add', podendo ser tuplas, listas, strings ou outros conjuntos como argumento. Em todos os casos, as duplicatas são evitadas pelo compilador.
+Exemplos:
+"""
+#adicionando e atualizando itens do conjunto (set)
+setVazio.add("Bruno")
+setVazio.add(5)
+setVazio.update([5, 13, 5, "Elvis"])
+print("'setVazio' alterado (add, update): " + str(setVazio))
+print()
+
+#removendo itens do conjunto (set)
+setVazio.remove("Bruno")
+print("Removido valor (Bruno) do 'setVazio': " + str(setVazio))
+print("OK")
+#setVazio.remove("Bruno")
+#print("OK")
+
+setVazio.discard(5)
+print("Removido valor (5) do 'setVazio': " + str(setVazio))
+print("OK")
+setVazio.discard(5)
+print("OK")
+print()
+print("Removendo último índice com a função 'pop()' retorno: " + str(setVazio.pop()))
+print("Resultado: " + str(setVazio))
+
+print()
+"""
+A diferença entre as duas funções é que a função 'remove()' retorna um erro ao tentar remover algum item no conjunto que não existe no mesmo,
+já no uso da função 'discard()' não é retornado o erro em questão.
+"""
+
+setVazio.clear()
+print("'setVazio' limpo, utilizando a função 'clear()' retorno (valor): " + str(setVazio))
+print()
+
+# MÉTODOS/FUNÇÕES, OPERAÇÕES LÓGICAS E MATEMÁTICAS PARA TRATAMENTO DE SET'S #
+conjA = {0, 1, 2, 5, 10, 13, 15, 25 , 55, 1010, 100}
+conjB = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100}
+
+#UNIÃO/JUNÇÃO (SEM VALORES REPETIDOS) DE SETS COM A FUNÇÃO 'union()'
+print("UNIÃO/JUNÇÃO (SEM VALORES REPETIDOS) DE SETS COM A FUNÇÃO (union()")
+print(conjA | conjB) #notação básica
+print(conjA.union(conjB)) #notação orientada a objetos
+print()
+
+#INTERSEÇÃO DE SETS COM A FUNÇÃO 'intersection()' (SEM VALORES REPETIDOS)
+print("INTERSEÇÃO DE SETS COM A FUNÇÃO 'intersection()' (SEM VALORES REPETIDOS)")
+print(conjA & conjB) #notação básica
+print(conjA.intersection(conjB)) #notação orientada a objetos
+print()
+
+#SET DIFFERENCE
+print("SET DIFFERENCE")
+print(conjA - conjB) #notação básica
+print(conjA.difference(conjB)) #notação orientada a objetos
+print(conjB - conjA)
+print(conjB.difference(conjA))
+print()
+print("SET SYMMETRIC DIFFERENCE: ")
+print(conjB ^ conjA) #notação básica
+print(conjA.symmetric_difference(conjB)) #notação orientada a objetos
+print()
+print("Verificando se o valor '5' existe no conjunto 'A': " + str(5 in conjA))
+print("Verificando se o valor '5' existe no conjunto 'B': " + str(5 in conjB))
+print("Verificando se o valor '0' não existe no conjunto 'A': " + str(0 not in conjA))
+print("Verificando se o valor '0' não existe no conjunto 'B': " + str(0 not in conjB))
+print()
 print()
 
 # RETORNANDO O TIPOS DE OBJETOS #
@@ -303,7 +388,7 @@ tipObjC = type(c)
 tipObjT = type((1, 2, 3))
 tipObjN = type(ListaN)
 tipObjD = type(meuDic)
-tipObjS = type(listaSet)
+tipObjS = type(lstSet)
 
 print("Tipo 'Inteiro': " + str(tipObjA))
 print("Tipo 'String': "+ str(tipObjC))
