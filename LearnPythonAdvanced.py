@@ -80,3 +80,5 @@ print(list(listaZIP)) #exibindo a lista zipada sem tratamento
 #break: é quebrar, quebra (ou interrompe) o fluxo natural do programa
 #continue: é continuar, ou seja, continua o fluxo natural do ciclo
 #pass: é passar, ou seja, deixa passar.
+
+# teste git
