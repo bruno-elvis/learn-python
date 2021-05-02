@@ -1,8 +1,9 @@
-import numpy as np # Importando a Biblioteca NumPy
+import numpy as np
+#from numpy.core.fromnumeric import amax # Importando a Biblioteca NumPy
 
-fArray = [5, 1, 10, 55, 2]
+fArray = [5, 1, 10, 55, 2] #declaração lista/array
 npArray = np.array(fArray)
-fMatriz = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+fMatriz = [[1, 1, 1], [2, 2, 2], [3, 3, 3]] #declaração de uma matriz do tipo 'list'
 npMatriz = np.array(fMatriz)
 
 print()
@@ -21,14 +22,14 @@ print()
 
 print("ARRAY POPULADA COM UMA DETERMINADA QUANTIDADE DE 'ZEROS':", np.zeros(3))
 print("ARRAY POPULADA COM UMA DETERMINADA QUANTIDADE DE 'UNS':", np.ones(3))
-print("MATRIZ POPULADA COM UMA DETERMINADA QUANTIDADE DE 'ZEROS':\n", np.zeros((5, 5)))
-print("MATRIZ POPULADA COM UMA DETERMINADA QUANTIDADE DE 'UNS':\n", np.ones((5, 5)))
+print("MATRIZ POPULADA COM UMA DETERMINADA QUANTIDADE DE 'ZEROS':\n", np.zeros((5, 5))) # 'zeros(colunas, linhas)'
+print("MATRIZ POPULADA COM UMA DETERMINADA QUANTIDADE DE 'UNS':\n", np.ones((5, 5))) # 'ones(colunas, linhas)'
 print()
 # MATRIZ IDENTIDADE
 print("MATRIZ 'IDENTIDADE' (POPULADA COM 'ZEROS' E 'UNS' UNIFORMEMENTE NA VERTICAL): \n", np.eye(5))
 print()
 #
-print("POPULAÇÃO DE ARRAY NUMPY IGUALMENTE SEPARADO ENTRE UM ÍNDICE DO ARRAY E OUTRO:", np.linspace(0, 10, 4))#parâmetros principais: ínicio do array, final do array e "passo" do array (espaço igualmente separado entre um índice do array e outro)
+print("POPULAÇÃO DE ARRAY NUMPY IGUALMENTE SEPARADO ENTRE UM ÍNDICE DO ARRAY E OUTRO:", np.linspace(0, 10, 4)) #parâmetros principais: ínicio do array, final do array e "passo" do array (espaço igualmente separado entre um índice do array e outro)
 print()
 
 # MÉTODO RANDOM
@@ -50,17 +51,82 @@ print("RETORNA O TAMANHO EM (COLUNAS, LINHAS) DE UM ARRAY NUMPY (arrayDeInteiros
 print()
 print("INTEIRO MÁXIMO DO ARRAY (arrayDeInteiros):", str(arrayDeInteiros.max()))
 print("INTEIRO MÍNIMO DO ARRAY (arrayDeInteiros):", str(arrayDeInteiros.min()))
-print("ÍNDICE QUE SE ENCONTRA O INTEIRO MÁXIMO (arrayDeInteiros):", str(arrayDeInteiros.argmax()))
-print("ÍNDICE QUE SE ENCONTRA O INTEIRO MÍNIMO (arrayDeInteiros):", str(arrayDeInteiros.argmin()))
+print("RETORNANDO O ÍNDICE EM QUE SE ENCONTRA O INTEIRO MÁXIMO  DENTRO DE UM ARRAY-NP (arrayDeInteiros):", str(arrayDeInteiros.argmax()))
+print("RETORNANDO O ÍNDICE EM QUE SE ENCONTRA O INTEIRO MÍNIMO DENTRO DE UM ARRAY-NP (arrayDeInteiros):", str(arrayDeInteiros.argmin()))
 print()
 print()
+
 # INDEXAÇÃO EM NUMPY ARRAYS
 indArray = np.arange(0, 56, 10)
 print(indArray)
 print()
-#buscado índices dentro de um array numpy
-print("BUSCANDO ÍNDICE NO ARRAY PASSANDO O ÍNDIDE NO PARÂMENTRO (indArray):", indArray[5])
-print("BUSCANDO ÍNDICES NO ARRAY PASSANDO OS ÍNDIDES DO INTERVALO NO PARÂMENTRO (indArray):", indArray[2:5])
 
+#BUSCANDO ÍNDICES DENTRO DE UM ARRAY NUMPY
+print("BUSCANDO ÍNDICE NO ARRAY PASSANDO O ÍNDIDE NO PARÂMENTRO (indArray): ", indArray[5]) #parâmetro inclusivo
+print("BUSCANDO ÍNDICES NO ARRAY PASSANDO OS ÍNDIDES DO INTERVALO NO PARÂMENTRO (indArray): ", indArray[2:5]) #parâmetros inclusivos
+print("RETORNANDO TODOS OS VALORES COM INICIO NO ÍNDICE '0': ", indArray[:3]) #valores do numpy array do índice 0 ao 3
+print("RETORNANDO TODOS OS VALORES COM INICIO NO ÍNDICE '2': ", indArray[2:]) #valores do numpy array do índice 2 ao último do array
+print()
 
-# ESTUDAR ANÁLISE EXPORÁTÓRIA #
+indArray[1:3] = 55
+print("DEFININDO TODOS OS VALORES DE UM INTERVALO DE UM ARRAY POR PARÂMETRO: ", indArray) #defini todos os valores do índice 1 ao 3 para '55'
+
+## PERCORRENDO ARRAY'S MULTIDIMENCIONAIS ##
+aMulti = np.arange(50).reshape(5, 10) #criando um array multidimensional com 50 valores de 0 a 49, tratando para ser um array de 10 colunas e 5 linhas
+
+print(aMulti)
+print()
+
+tam_aMulti = np.shape(aMulti)
+print("Tamanho do array multidimensional (aMulti): ", tam_aMulti)
+print()
+
+print(aMulti[:3]) #retornando as primeiras 3 linhas da matriz
+print()
+
+'''
+* IMPORTANTE *
+No Python variáveis com valores recebidos de outros objetos/variáveis REFERENCIAM o próprio objeto, recebem uma referencia do objeto de origem
+'''
+aMulti2 = aMulti[:3]
+aMulti2[:3] = 99
+
+print("Matriz tratada (aMulti2) : \n", aMulti2)
+print()
+print("Matriz original (aMulti) : \n", aMulti)
+print()
+
+'''
+* IMPORTANTE *
+Neste caso para trabalhar com os valores pertencentes apenas à nova variável definida, pode-se utilizar o método 'copy()'
+'''
+aMulti2 = aMulti[:3].copy()
+aMulti2[:3] = 99
+
+print("Array multidimencional recebendo a cópia dos valores de outro array (não referenciando): \n", aMulti2)
+print()
+print("Matriz original (aMulti) : \n", np.arange(50).reshape(5, 10)) #= aMulti
+print()
+
+# FATIANDO (SLICE) ARRAY MULTIDIMENCIONAIS #
+fatiaDoArray = aMulti[3:5, 7] #retornando a coluna de índice 7 (6ª coluna), das linhas de índice 3 à 5 (4ª e 5ª linhas)
+print("Retornando a 6ª coluna das 4ª e 5ª linhas na matriz'aMulti': ", fatiaDoArray)
+print()
+
+cemArray = np.arange(100) #declarando um array numpy de 100 índices (0 à 99)
+print("Tamahno do 'cemArray':", np.shape(cemArray), "- do Tipo:", type(cemArray))
+print()
+
+cemMatriz = cemArray.reshape(10, 10) #definindo um array multidimensional numpy com 10 colunas e 10 linhas (tuplas)
+# o método 'reshape()' do numpy vai retornar erro caso a multiplicação das colunas, vezes as linhas não for igual ao total de índices do array origem
+print("Tamanho do array multidimensional 'cemMatriz':", np.shape(cemMatriz), "- do Tipo:", type(cemMatriz))
+
+quintuplosNoArray = cemArray % 5 == 0 #array que recebe o valor do índice do array origem, se o retorno da condição passada (resto da divisão por 5 for 0) for 'True', para cada índice do array numpy de origem (referência)
+quintuplosNaMatriz = cemMatriz % 5 == 0
+print()
+print("Imprimindo os índices que a condição foi 'True' no array 'quintuplosNoArray': \n", cemArray[quintuplosNoArray])
+print()
+print("Imprimindo os índices que a condição foi 'True' no array 'quintuplosNaMatriz': \n", cemMatriz[quintuplosNaMatriz])
+print()
+
+### ESTUDAR ANÁLISE EXPORÁTÓRIA ###

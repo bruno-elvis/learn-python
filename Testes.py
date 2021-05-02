@@ -140,10 +140,10 @@ print()
 # MANIPULAÇÃO DE ARQUIVOS
 print("TRABALHANDO COM MANIPULAÇÃO DE ARQUIVOS")
 
-insArquivo = open('CONTAS.TXT', 'rt')
+insArquivo = open(file='CONTAS.TXT', mode='rt')
 #print(insArquivo.read()) #função para ler o arquivo complero no seu formato atual
 
-linhas = insArquivo.readlines() #função para ler as linhas do arquivo
+linhas = insArquivo.read() #função para ler as linhas do arquivo
 print(linhas)
 print(type(linhas))
 
