@@ -1,2 +1,0 @@
-pip install numpy
-python -m pip install --upgrade pip
