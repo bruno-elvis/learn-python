@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from random import Random, randint, random #para importar o random
 from time import sleep #para importar a pausa antes do sorteio
 from operator import itemgetter, not_
@@ -30,7 +29,7 @@ print("-="*50)
 print("========== CHEGADA ==========")
 for rank, motinha in enumerate(ranking):
     print(f"{rank+1}º lugar: {motinha[0]}")
-=======
+
 from random import Random, randint, random #para importar o random
 from time import sleep #para importar a pausa antes do sorteio
 from operator import itemgetter, not_
@@ -62,5 +61,4 @@ print("-="*50)
 print("========== CHEGADA ==========")
 for rank, motinha in enumerate(ranking):
     print(f"{rank+1}º lugar: {motinha[0]}")
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
-    sleep(2)
+    sleep(1)

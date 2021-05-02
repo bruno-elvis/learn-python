@@ -18,7 +18,7 @@ qryUSE = 'USE Empresario'
 qry = 'SELECT * FROM CADPRO'
 '''
 
-import fdb
+#import fdb
 
 con = fdb.connect(dsn='/var/database.fdb', user='SYSDBA', password='masterkey')
 cursor = con.cursor()

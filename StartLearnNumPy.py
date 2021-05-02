@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import numpy as np
 #from numpy.core.fromnumeric import amax # Importando a Biblioteca NumPy
 
@@ -130,7 +129,6 @@ print()
 print("Imprimindo os índices que a condição foi 'True' no array 'quintuplosNaMatriz': \n", cemMatriz[quintuplosNaMatriz])
 print()
 
-=======
 import numpy as np
 #from numpy.core.fromnumeric import amax # Importando a Biblioteca NumPy
 
@@ -262,5 +260,4 @@ print()
 print("Imprimindo os índices que a condição foi 'True' no array 'quintuplosNaMatriz': \n", cemMatriz[quintuplosNaMatriz])
 print()
 
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
 ### ESTUDAR ANÁLISE EXPORÁTÓRIA ###

@@ -1,6 +1,6 @@
 from os import read
 import pandas as pd
-import pyodbc
+import pyodbc as odbc
 """
 server = 'tcp:myserver.database.windows.net'
 database = 'Empresario' 
@@ -14,7 +14,7 @@ database = "Empresario"
 username = "sa"
 password = "SA_0bjetiva"
     
-cnx = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+cnx = odbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
     
 #return cnx.cursor()
 

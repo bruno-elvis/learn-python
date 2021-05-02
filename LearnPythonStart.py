@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*- (Muda o formato de texto da linguagem para codificação)
 print("Olá mundo")
 print(5*5)
-"""
-<<<<<<< HEAD
+
+'''
 Comentário de Várias Linhas (Criação de Sumários) """ """
-=======
-Comentário de Várias Linhas """ """
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
-"""
+
+Comentário de Várias Linhas ''' '''
+'''
 # DEFINIÇÕES DE ALGUMAS VARIÁVEIS E LISTAS #
 a = 5
 b = 10
@@ -165,11 +164,11 @@ print()
 
 # MANIPULAÇÃO DE ARQUIVOS #
 print("TRABALHANDO COM MANIPULAÇÃO DE ARQUIVOS")
-<<<<<<< HEAD
+
 '''
 =======
 """
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
+
 # MODOS DE ACESSO (LEITURA E ESCRITA DE ARQUIVOS) DO PARÂMETRO DO MÉTODO 'open()' #
 'r'  -> Somente leitura do arquivo;
 'w'  -> Escrita (caso o arquivo já exista, será apagado e um novo arquivo vazio será criado);
@@ -192,8 +191,8 @@ Ref.: https://docs.python.org/pt-br/3/library/functions.html?highlight=open#open
 #linhas = insArquivo.read() #função para ler as linhas do arquivo
 #print(linhas)
 #print(type(linhas))
-=======
-"""
+
+
 #insArquivo = open('CONTAS.TXT', 'rt')
 #print(insArquivo.read()) #função para ler o arquivo completo no seu formato atual (numa única string)
 
@@ -201,18 +200,18 @@ Ref.: https://docs.python.org/pt-br/3/library/functions.html?highlight=open#open
 #linhas = insArquivo.readline() #função para ler e retornar uma linha do arquivo a cada iteração (inicia na linha 1 do arquivo)
 #linhas = insArquivo.readlines() #função para ler e retornar todas as linhas do arquivo (retorna uma lista)
 #print(linhas)
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
+
 
 #insArquivo.close() #fecha o arquivo (encerra a instância do objeto manipulador de arquivos)
 
 #newFile = open('TESTE_X.TXT', 'w') #cria um novo arquivo (parâmentro 'w' para modo de escrita)
 
 #Para editar o arquivo:
-<<<<<<< HEAD
+
 #newFile.write("Teste de edicao de arquivo") #adiciona conteúdo no arquivo ao final
-=======
+
 #newFile.write("Teste de edicao de arquivo")
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
+
 print()
 
 # TRABALHANDO COM DICIONÁRIOS #
@@ -223,7 +222,7 @@ meuDic = {1: "Valor 1", 2: "Valor 2", 3: "Valor 3", 'Quarto': "Valor 4"}
 
 print("meuDic: " + str(meuDic)) #exibe todo o conteúdo do dicionário
 print()
-<<<<<<< HEAD
+
 print("Exibindo tamanho do dicionário 'meuDic' com a função 'len()', retorno: " + str(len(meuDic)) + " (índices).") #Retorna o tamanho do dicionário com a função 'len()'
 print()
 del meuDic[1] #Exclui um índice de um dicionário através de uma chave, também pode receber a notação 'del(meuDic[1])'
@@ -252,9 +251,8 @@ print("Inserindo um novo valor no dicionário caso ele não exista, com a funç�
 #Retorna o valor atual da chave passada por parãmetro na função setdefault(chave, valorDefault), caso a chave exista no dicionário
 print("Valor do dicionário 'meuDic' atual: " + str(meuDic))
 print()
-=======
+
 print("Valores de um índices especificados parametricamente: " + meuDic['Quarto'] + " / " + meuDic[2]) #exibe valor de um índice especificado pela chave via parâmetro
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
 
 print()
 
@@ -292,11 +290,11 @@ print()
 print("TRABALHANDO CLASSE 'RANDOM'")
 
 import random as rd
-<<<<<<< HEAD
+
 from typing import FrozenSet, Union
-=======
+
 from typing import Union
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
+
 #from typing import KeysView, cast
 
 num = rd.randint(1, 15) #método para gerar um número aleatório com parâmetro inicial e final
@@ -324,11 +322,8 @@ finally:
     print("10 / 2 = " + str(10 / 2))
 
 # RECEBENDO VALORES PELO MÉTODO 'INPUT' #
-<<<<<<< HEAD
+
 '''
-=======
-"""
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
 print("RECEBENDO VALORES PELO MÉTODO 'INPUT'")
 print()
 meu_texto = input("Digite um texto: ") #recebendo textos
@@ -336,29 +331,25 @@ numero_inteiro = int(input("Digite um numero inteiro: ")) #recebendo inteiros
 numero_decimal = float(input("Digite um numero decimal: ")) #recebendo decimais
 print("Imputs concatenados: " + meu_texto + " | " + str(numero_inteiro) + " | " + str(numero_decimal))
 print()
-<<<<<<< HEAD
 '''
-=======
-"""
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
 print()
 
 # TRABALHANDO COM SET'S (CONJUNTOS) #
 print("TRABALHANDO COM SET'S (CONJUNTOS)")
 print()
-<<<<<<< HEAD
+
 '''
 Conjuntos não possuem noção de ordem por isso seus elementos não podem ser acessados com colchetes [] nem podem ser fatiados.
 Os conjuntos (set) não aceitam valores repetidos ao tentar criar um conjunto com valores repetidos eles serão descartados só sobrando um valor do mesmo.
 Aceita tipos diferentes como valor (inteiro, flutuante, tupla, string, etc.), mas mão aceita conjuntos mutáveis (listas ou dicionários) como valor.
 '''
-=======
+
 """
 Conjuntos não possuem noção de ordem por isso seus elementos não podem ser acessados com colchetes [] nem podem ser fatiados.
 Os conjuntos (set) não aceitam valores repetidos ao tentar criar um conjunto com valores repetidos eles serão descartados só sobrando um valor do mesmo.
 Aceita tipos diferentes como valor (inteiro, flutuante, tupla, string, etc.), mas mão aceita conjuntos mutáveis (listas ou dicionários) como valor.
 """
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
+
 listaS = ['Maçã', 'Laranja', 'Uva', 'Abacaxi', 'Maçã', 'Abacate', 'Laranja'] #declaração de uma lista [] (utiliza-se colchetes)
 meuSet = {5, 1.0, "Sete", (1, 2, 3)} #declaração de um set {} (ultiliza-se chaves)
 lstSet = set(listaS) #declarando um 'set' através de uma lista
@@ -386,28 +377,23 @@ setVazio = set() #forma correta
 print("SET vazio declarado e instanciado a partir da classe 'set()' retorna (valor): " + str(setVazio) + " | tipo: " + str(type(setVazio)))
 print()
 
-<<<<<<< HEAD
 '''
-=======
-"""
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
 Os conjuntos são mutáveis. No entanto, como eles são desordenados, a indexação não tem sentido.
 Não podemos acessar ou alterar um elemento de um conjunto usando indexação ou fatiamento.
 Podemos adicionar um único elemento, ou vários, utilizando o método 'add', podendo ser tuplas, listas, strings ou outros conjuntos como argumento. Em todos os casos, as duplicatas são evitadas pelo compilador.
 Exemplos:
-<<<<<<< HEAD
 '''
 #adicionando e atualizando itens do conjunto (set)
 setVazio.add("Bruno")
 setVazio.add(5)
 setVazio.update([5, 13, 5, "Elvis"]) #notação simples: (set |= other | ...)
-=======
-"""
+
+
 #adicionando e atualizando itens do conjunto (set)
 setVazio.add("Bruno")
 setVazio.add(5)
 setVazio.update([5, 13, 5, "Elvis"])
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
+
 print("'setVazio' alterado (add, update): " + str(setVazio))
 print()
 
@@ -428,17 +414,11 @@ print("Removendo último índice com a função 'pop()' retorno: " + str(setVazi
 print("Resultado: " + str(setVazio))
 
 print()
-<<<<<<< HEAD
+
 '''
 A diferença entre as duas funções é que a função 'remove()' retorna um erro ao tentar remover algum item no conjunto que não existe no mesmo,
 já no uso da função 'discard()' não é retornado o erro em questão.
 '''
-=======
-"""
-A diferença entre as duas funções é que a função 'remove()' retorna um erro ao tentar remover algum item no conjunto que não existe no mesmo,
-já no uso da função 'discard()' não é retornado o erro em questão.
-"""
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
 
 setVazio.clear()
 print("'setVazio' limpo, utilizando a função 'clear()' retorno (valor): " + str(setVazio))
@@ -471,7 +451,7 @@ print("SET SYMMETRIC DIFFERENCE: ")
 print(conjB ^ conjA) #notação básica
 print(conjA.symmetric_difference(conjB)) #notação orientada a objetos
 print()
-<<<<<<< HEAD
+
 print("Verificando se o valor '13' existe no conjunto 'A', retorno: " + str(13 in conjA))
 print("Verificando se o valor '13' existe no conjunto 'B', retorno: " + str(13 in conjB))
 print("Verificando se o valor '0' não existe no conjunto 'A', retorno: " + str(0 not in conjA))
@@ -529,13 +509,13 @@ Tembém existe a função 'intersection_update(*others)';
 Notação simples (set &= other & ...);
 Atualiza o conjunto, mantendo somente elementos encontrados nele e em outros.
 '''
-=======
+
 print("Verificando se o valor '5' existe no conjunto 'A': " + str(5 in conjA))
 print("Verificando se o valor '5' existe no conjunto 'B': " + str(5 in conjB))
 print("Verificando se o valor '0' não existe no conjunto 'A': " + str(0 not in conjA))
 print("Verificando se o valor '0' não existe no conjunto 'B': " + str(0 not in conjB))
 print()
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
+
 print()
 
 # RETORNANDO O TIPOS DE OBJETOS #

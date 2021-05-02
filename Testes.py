@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 i = 0
 
 while i < 5:
@@ -154,7 +153,7 @@ insArquivo.close() #fecha o arquivo (encerra a instância do objeto manipulador 
 
 #Para editar o arquivo:
 #newFile.write("Teste de edicao de arquivo")
-=======
+
 i = 0
 
 while i < 5:
@@ -310,5 +309,4 @@ insArquivo.close() #fecha o arquivo (encerra a instância do objeto manipulador 
 
 #Para editar o arquivo:
 #newFile.write("Teste de edicao de arquivo")
->>>>>>> c8c6db1f6c461ce06eb5644698db2e8e2d427641
 print("")
