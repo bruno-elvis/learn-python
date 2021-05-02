@@ -1,0 +1,3 @@
+Ctrl + Shift + P
+
+Create New Blank Jupyter Notebook
